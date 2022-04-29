@@ -54,6 +54,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VProducto.Designer.cs">
+      <DependentUpon>VProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VUsuarios.Designer.cs">
+      <DependentUpon>VUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +78,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VProducto.resx">
+      <DependentUpon>VProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VUsuarios.resx">
+      <DependentUpon>VUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{cb497b0a-1be7-491c-8284-77e5aa52e7e0}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
