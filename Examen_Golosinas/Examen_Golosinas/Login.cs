@@ -26,9 +26,10 @@ namespace Examen_Golosinas
             Usuario usuario = new Usuario();
 
             usuario = usuarioDA.Login(txtUsuario.Text, txtClave.Text);
-            
-            VUsuarios vUsuarios = new VUsuarios();
-            vUsuarios.Show();
+           
+            VMenu vMenu = new VMenu();
+            vMenu.Show();
+            this.Hide();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

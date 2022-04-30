@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +45,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dvgProductos = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,6 +131,7 @@
             this.btnNuevo1.TabIndex = 9;
             this.btnNuevo1.Text = "Nuevo";
             this.btnNuevo1.UseVisualStyleBackColor = true;
+            this.btnNuevo1.Click += new System.EventHandler(this.btnNuevo1_Click);
             // 
             // btnModificar
             // 
@@ -137,6 +141,7 @@
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -146,6 +151,7 @@
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -155,6 +161,7 @@
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
@@ -181,6 +188,11 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // VProducto
             // 
@@ -205,8 +217,10 @@
             this.Controls.Add(this.label1);
             this.Name = "VProducto";
             this.Text = "VProducto";
+            this.Load += new System.EventHandler(this.VProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +244,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dvgProductos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
